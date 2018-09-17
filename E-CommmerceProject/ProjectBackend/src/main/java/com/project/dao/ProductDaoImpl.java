@@ -11,8 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.project.models.Product;
 
-
-
 //tells the spring container to create a bean of type ProductDao
 
 @Repository 
@@ -22,10 +20,10 @@ public class ProductDaoImpl implements ProductDao{
 	@Autowired
 	private SessionFactory sessionFactory;
 	/**
-     * Insert product details into a product table using hibernate framework
-     * 1. Get session object from sessionfactory bean
-     * 2. using method, insert the data
-     */
+   * Insert product details into a product table using hibernate framework
+   * 1. Get session object from sessionfactory bean
+   * 2. using method, insert the data
+   */
 	
 	
 	public Product saveProduct(Product product) {

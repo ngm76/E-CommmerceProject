@@ -1,7 +1,10 @@
 package com.project.dao;
 
+
 import java.util.List;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -12,9 +15,12 @@ import junit.framework.TestCase;
 
 public class ProductDaoImplTest extends TestCase {
 	
+	
 	ApplicationContext context=new AnnotationConfigApplicationContext(DBConfiguration.class,ProductDaoImpl.class);
-	   ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
+	ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
 	   
+	@Test
+	@Ignore
 	public void testSaveProduct() {
 		Product product=new Product(); //New Product
         product.setProductname("Introduction to Spring framework"); //inserted in the column productname

@@ -8,7 +8,6 @@ import com.project.models.Product;
 
 @Service
 public interface ProductDao {
-
 	Product saveProduct(Product product);
 	void deleteProduct(Product product);
 	Product updateProduct(Product product);
